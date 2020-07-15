@@ -32,6 +32,7 @@ button:focus {
 .task8,
 .task9 {
   display: block;
+  margin-bottom: 50px;
 }
 
 body {
@@ -44,4 +45,10 @@ body {
 .container {
   max-width: 750px;
   margin: auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px 0;
 }
