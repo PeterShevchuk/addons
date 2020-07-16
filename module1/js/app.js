@@ -164,9 +164,10 @@ const task9 = {
   inputCheck: classTasks[9].querySelector("[name='react']"),
   text: [['Камінь', 'Ножиці', 'Папір'],['нічия', 'Ви виграли', 'Ви програли']],
   check() {
-    this.compNumber = Math.floor(Math.random() * Math.floor(2));
+    this.compNumber = Math.floor(Math.random() * Math.floor(3));
+    console.log(this.compNumber)
     this.userNumber = Number(this.inputCheck.value);
-
+    console.log(this.userNumber)
     if (this.userNumber === this.compNumber) {this.message = this.text[1][0]}
     if (this.userNumber === 0 && this.compNumber === 1 || this.userNumber === 1 && this.compNumber === 2 || this.userNumber === 2 && this.compNumber === 0) {this.message = this.text[1][1]}
     if (this.userNumber === 0 && this.compNumber === 2 || this.userNumber === 1 && this.compNumber === 0 || this.userNumber === 2 && this.compNumber === 1) {this.message = this.text[1][2]}
