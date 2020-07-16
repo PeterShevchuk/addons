@@ -144,3 +144,33 @@ const task7 = {
 task7.btnClick.addEventListener("click", () => {
   task7.check();
 });
+
+
+const task8 = {
+  btnClick: classTasks[8].querySelector("[type='button']"),
+  inputCheck: classTasks[8].querySelector("[type='number']"),
+  check() {
+    result(8, `${Math.trunc(this.inputCheck.value/60)}:${this.inputCheck.value%60}`);
+  }
+}
+task8.btnClick.addEventListener("click", () => {
+  task8.check();
+});
+
+const task9 = {
+  btnClick: classTasks[9].querySelector("[type='button']"),
+  inputCheck: classTasks[9].querySelector("[name='react']"),
+  text: [['Камінь', 'Ножиці', 'Папір'],['нічия', 'Ви виграли', 'Ви програли']],
+  check() {
+    this.compNumber = Math.floor(Math.random() * Math.floor(2));
+    this.userNumber = Number(this.inputCheck.value);
+
+    if (this.userNumber === this.compNumber) {this.message = this.text[1][0]}
+    if (this.userNumber === 0 && this.compNumber === 1 || this.userNumber === 1 && this.compNumber === 2 || this.userNumber === 2 && this.compNumber === 0) {this.message = this.text[1][1]}
+    if (this.userNumber === 0 && this.compNumber === 2 || this.userNumber === 1 && this.compNumber === 0 || this.userNumber === 2 && this.compNumber === 1) {this.message = this.text[1][2]}
+    result(9, `Ви загадали ${this.text[0][this.userNumber]}, компютер загадав ${this.text[0][this.compNumber]}, результати - ${this.message}`);
+  }
+}
+task9.btnClick.addEventListener("click", () => {
+  task9.check();
+});
