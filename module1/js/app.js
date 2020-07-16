@@ -150,7 +150,9 @@ const task8 = {
   btnClick: classTasks[8].querySelector("[type='button']"),
   inputCheck: classTasks[8].querySelector("[type='number']"),
   check() {
-    result(8, `${Math.trunc(this.inputCheck.value/60)}:${this.inputCheck.value%60}`);
+    this.min = this.inputCheck.value%60<10? '0'+this.inputCheck.value%60 : this.inputCheck.value%60;
+    this.hour = Math.trunc(this.inputCheck.value/60);
+    result(8, `${this.hour} годин та ${this.min} хвилин`);
   }
 }
 task8.btnClick.addEventListener("click", () => {
