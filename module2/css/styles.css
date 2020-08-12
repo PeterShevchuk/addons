@@ -1,0 +1,58 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+.task1,
+.task2,
+.task3,
+.task4,
+.task5,
+.task6,
+.task7,
+.task8,
+.task9 {
+  display: block;
+  margin-bottom: 50px;
+}
+
+body {
+  color: #000000;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.result {
+  display: block;
+}
